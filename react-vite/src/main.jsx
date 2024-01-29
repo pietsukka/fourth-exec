@@ -7,7 +7,9 @@ import {
 import "./index.css";
 
 // imports edit
-import EditContact from "./routes/edit";
+import EditContact, {
+  action as editAction,
+} from "./routes/edit";
 
 //imports root router and loader
 import Root, { loader as rootLoader, action as rootAction, } from "./routes/root";
@@ -40,6 +42,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId/edit",
         element: <EditContact />,
         loader: contactLoader,
+        action: editAction,
       },
     ],
   },
