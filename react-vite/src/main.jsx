@@ -20,6 +20,7 @@ import ErrorPage from "./error-page";
 //Imports contact
 import Contact, {
   loader as contactLoader,
+  action as contactAction,
 } from "./routes/contact";
 
 //Imports destroy
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: "contacts/:contactId/edit",
