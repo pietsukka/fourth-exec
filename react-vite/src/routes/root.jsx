@@ -1,7 +1,3 @@
-
-
-//creates the root as html
-
 export default function Root() {
     return (
       <>
