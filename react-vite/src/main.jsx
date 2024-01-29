@@ -6,13 +6,19 @@ import {
 } from "react-router-dom";
 import "./index.css";
 
+// imports edit
+import EditContact from "./routes/edit";
+
 //imports root router and loader
 import Root, { loader as rootLoader, action as rootAction, } from "./routes/root";
 //Imports error page
 import ErrorPage from "./error-page";
 
 //Imports contact
-import Contact from "./routes/contact";
+import Contact, {
+  loader as contactLoader,
+} from "./routes/contact";
+
 
 
 
@@ -28,6 +34,12 @@ const router = createBrowserRouter([
       {
         path: "contacts/:contactId",
         element: <Contact />,
+        loader: contactLoader,
+      },
+      {
+        path: "contacts/:contactId/edit",
+        element: <EditContact />,
+        loader: contactLoader,
       },
     ],
   },
