@@ -13,6 +13,7 @@ import EditContact, {
 
 //imports root router and loader
 import Root, { loader as rootLoader, action as rootAction, } from "./routes/root";
+
 //Imports error page
 import ErrorPage from "./error-page";
 
